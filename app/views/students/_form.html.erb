@@ -12,20 +12,19 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
+  <%= form.text_field :name, placeholder: 'Enter name' %>
+</div>
+</br>
   <div>
-    <%= form.label :roll_no, style: "display: block" %>
-    <%= form.text_field :roll_no %>
+    
+    <%= form.text_field :roll_no ,placeholder: 'Enter Roll no.'%>
   </div>
-
+</br>
   <div>
-    <%= form.label :attendence, style: "display: block" %>
-    <%= form.text_field :attendence %>
+    
+    <%= form.select :attendence, [['Present', 'P'], ['Absent', 'A']], { prompt: 'Attendence' }, class: 'form-control' %>
   </div>
-
+</br>
   <div>
     <%= form.submit %>
   </div>

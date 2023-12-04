@@ -1,17 +1,17 @@
-<div id="<%= dom_id student %>">
-  <p>
-    <strong>Name:</strong>
+
+
+
+<div class="row">
+  <div class="column">
     <%= student.name %>
-  </p>
-
-  <p>
-    <strong>Roll no:</strong>
+  </div>
+  <div class="column">
     <%= student.roll_no %>
-  </p>
-
-  <p>
-    <strong>Attendence:</strong>
+  </div>
+  <div class="column">
     <%= student.attendence %>
-  </p>
-
+  </div>
+  <div class="column">
+    <%= link_to "Show this student", student %>
+  </div>
 </div>
