@@ -1,0 +1,31 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+  <%= form.text_field :name, placeholder: 'Enter name' %>
+</div>
+</br>
+  <div>
+    
+    <%= form.text_field :roll_no ,placeholder: 'Enter Roll no.'%>
+  </div>
+</br>
+  <div>
+    
+    <%= form.select :attendence, [['Present', 'P'], ['Absent', 'A']], { prompt: 'Attendence' }, class: 'form-control' %>
+  </div>
+</br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

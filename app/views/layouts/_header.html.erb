@@ -1,0 +1,15 @@
+
+
+<div class="topnav">
+    <%= link_to 'AMS', root_path , class: "active"%>
+    <% if teacher_signed_in? %>
+    <%= link_to 'Data', students_path %>
+    <%= link_to 'Add', new_student_path %>
+    
+    <%= link_to 'Profile', edit_teacher_registration_path %>
+    <%= button_to 'Sign Out', destroy_teacher_session_path,method: :delete , class: "button-style" %>
+    <% else %>
+    <%= link_to 'Sign In', new_teacher_session_path %>
+    <%= link_to 'Sign Up', new_teacher_registration_path %>
+    <% end %>
+</div>
