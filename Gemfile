@@ -30,6 +30,7 @@ gem "jbuilder"
 gem 'aws-sdk-rails', '~> 3'
 gem 'aws-sdk-s3', '~> 1'
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'rake', '~> 13.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
